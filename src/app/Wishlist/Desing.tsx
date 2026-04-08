@@ -2,26 +2,20 @@
 import { ProductType } from '@/Typas/product.type'
 import { FiTrash } from 'react-icons/fi'
 import { deleteItems } from '../_action/wishlist.action'
-import { useContext } from 'react'
-import { wishConstext } from '../_context/WishlistContext'
 
 
 ///// stop in delete items  in here (async , use client) \\\\\\
 
 export default function Desing( {item} : {item : ProductType}) {
 
-    const {getWishList , setgetWishList} = useContext(wishConstext)
 
     
     async function handelDelete(id:string) {
 
-        console.log("item" ,item)
 
         const res = await deleteItems(id)
 
- const newWishlist = await getAllWishlist()
  
-  setgetWishList(newWishlist.data)
 
     }
 
