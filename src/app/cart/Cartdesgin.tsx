@@ -8,11 +8,12 @@ import { deleteItemFromShop, upDataPRoductCard } from '../_action/cart.action'
 import { cartContext } from '../_context/CartContextProvider'
 import { toast } from 'sonner'
 import { Minus, Plus } from 'lucide-react'
+import { useCart } from '../_context/usecart'
 
 export default function Cartdesgin({items} : {items : CartItemsTypes}) {
 
 
- const {setcartDataNumber ,setcartDataProduct ,setnumberOfCart} = useContext(cartContext)
+ const {setcartDataNumber ,setcartDataProduct ,setnumberOfCart} = useCart()
 
 
 

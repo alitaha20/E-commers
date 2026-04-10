@@ -4,10 +4,18 @@ import React, { useContext } from 'react'
 import { addProductToCart } from '../_action/cart.action'
 import { toast } from 'sonner';
 import { cartContext } from '../_context/CartContextProvider';
+import { CartItemsTypes } from '@/Typas/cart.itmes';
+import { useCart } from '../_context/usecart';
+
+type CartContextType = {
+  setnumberOfCart: React.Dispatch<React.SetStateAction<number>>;
+  setcartDataProduct: React.Dispatch<React.SetStateAction<CartItemsTypes[]>>;
+  setcartDataNumber: React.Dispatch<React.SetStateAction<number>>;
+};
 
 export default function AddCartBtn({productid} : {productid:string}) {
 
-  const {setnumberOfCart, setcartDataProduct , setcartDataNumber} = useContext(cartContext)
+  const {setnumberOfCart , setcartDataProduct , setcartDataNumber} :CartContextType = useCart()
 
  async function handelProductToCart (){
 
@@ -22,14 +30,16 @@ if(res.status = "success"){
   }) 
 
     
-setnumberOfCart(res.numOfCartItems)
+setnumberOfCart(res.numOfCartItems )
 setcartDataProduct(res.data.products)
 setcartDataNumber(res.data.totalCartPrice)
 
+console.log(res.numOfCartItems)
+console.log(res.data.products)
+console.log(res.data.totalCartPrice)
+
 
 }
-
-
 
     
 

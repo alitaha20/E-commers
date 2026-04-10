@@ -31,7 +31,7 @@ export default function AddCartToWish({productId} : {productId : string}) {
   return (
     <button  onClick={handelWishlist}  type='button' 
     className='w-8 h-8 p-[8] cursor-pointer drop-shadow-xl border rounded-full text-2xl  flex justify-center items-center'>
-        <CiHeart />
+        <CiHeart />.
          </button >
   )
 }

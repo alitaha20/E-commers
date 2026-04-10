@@ -43,7 +43,7 @@ export default function Desing( {item} : {item : ProductType}) {
 
     <div className=' gap-2'>
         <button className=' p-2 bg-[#16A34A] text-white text-lg rounded-xl'> Add To Cart</button>
-        <button  onClick={()=>handelDelete(item.id)} className=' cursor-pointer p-2 bg-gray-300 rounded-lg ms-3'> <FiTrash/> </button>
+        <button  onClick={()=>handelDelete(item.id)} className=' cursor-pointer p-2 bg-gray-300 rounded-lg ms-3'> <FiTrash/>. </button>
     </div>
 
 </div>

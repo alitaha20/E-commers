@@ -5,11 +5,12 @@ import Sidebar from '../cart/Sidebar'
 import { Field, FieldError, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { shippingAddressType } from '@/Typas/order.type'
+import { shippingAddressType, Value } from '@/Typas/order.type'
 import { cartCashOrder, cartVisaOrder } from '../_action/order.action'
 import { cartContext } from '../_context/CartContextProvider'
 import { toast, Toaster } from 'sonner'
 import { Toast } from 'radix-ui'
+import { useCart } from '../_context/usecart'
 
 export default function Paymentpage() {
 
@@ -25,13 +26,12 @@ export default function Paymentpage() {
         }
     })
 
-    const {cartId , cartDataNumber ,numberOfCart } = useContext(cartContext)
+    const {cartId , cartDataNumber ,numberOfCart } = useCart()
 
      console.log("cartId" ,cartId)
 
 
-    async function  handelPayment (value){
-        console.log(value)
+    async function  handelPayment (value:Value){
 
         const userData : shippingAddressType = { 
           shippingAddress : {

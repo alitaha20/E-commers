@@ -3,12 +3,12 @@ import { TbBrandStackshare } from 'react-icons/tb'
 import Disginbrands from './Disgin'
 import { getAllBrands } from '../_action/brands.action'
 import Disgin from './Disgin'
+import { BrandTypes, DataWishlist } from './brands'
 
 export default async function brands() {
 
 
-  const items = await getAllBrands()
-
+  const items : BrandTypes = await getAllBrands()
 
   
   return (
@@ -30,7 +30,7 @@ export default async function brands() {
 
     <div className=' p-5 flex justify-center items-center flex-wrap  gap-3'>
 
-{items.data.map((item)=> <Disgin key={item.id} item={item}/>)}
+{items.data.map((item : DataWishlist)=> <Disgin key={item._id} item={item}/>)}
 
 </div>
 

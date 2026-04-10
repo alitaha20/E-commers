@@ -57,7 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
 
-  const {numberOfCart} = useContext(cartContext)
+  const {numberOfCart}  = useContext(cartContext)
 
 
 const session =  useSession()

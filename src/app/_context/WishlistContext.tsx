@@ -1,5 +1,6 @@
 "use client"
 
+import { Cartwishlist } from "@/Typas/wishlist"
 import { createContext, useState } from "react"
 
 
@@ -7,7 +8,7 @@ import { createContext, useState } from "react"
 export const wishConstext  = createContext({})
 
 
-export  function WishContextProvider({children , Wishlist})  {
+export  function WishContextProvider({children , Wishlist} :{children : React.ReactNode , Wishlist :Cartwishlist})  {
 
     
     

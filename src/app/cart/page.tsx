@@ -1,17 +1,16 @@
 "use client"
 
-import { useContext } from 'react'
+import { CartItemsTypes } from '@/Typas/cart.itmes'
+import { useCart } from '../_context/usecart'
 import Cartdesgin from './Cartdesgin'
 import Sidebar from './Sidebar'
-import { cartContext } from '../_context/CartContextProvider'
-import { CategoryType } from '@/Typas/product.type'
 
 
 export default function Shop() {
 
   
 
- const {numberOfCart ,cartDataProduct , cartDataNumber}  = useContext(cartContext)
+ const {numberOfCart ,cartDataProduct , cartDataNumber}  = useCart()
 
   return (<>
   
@@ -21,7 +20,7 @@ export default function Shop() {
 
   <div className='   col-span-12 md:col-span-8 pe-3 '> 
 
-    {cartDataProduct.map( (items : CategoryType) => <Cartdesgin key={items._id} items={items}/>)}
+    {cartDataProduct.map( (items : CartItemsTypes) => <Cartdesgin key={items._id} items={items}/>)}
 
   </div>
 

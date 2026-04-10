@@ -7,3 +7,11 @@ shippingAddress : {
 
 }
 }
+
+export interface Value {
+    details : string;
+    phone : string;
+    city : string;
+    type: string;
+
+}

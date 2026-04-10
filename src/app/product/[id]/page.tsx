@@ -8,10 +8,12 @@ import { FiStar } from 'react-icons/fi';
 import { IoReload } from 'react-icons/io5';
 import { MdElectricBolt } from 'react-icons/md';
 
-export default  async function page({params} ) {
+export default  async function page({params} : { params: { id: string } } ) {
 
-const {id} =  await params
-
+    
+    const {id} = await params
+    
+    console.log("params" ,params)
 
  const product = await  getPRoductById(id)
 

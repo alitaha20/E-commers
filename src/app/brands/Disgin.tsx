@@ -1,5 +1,7 @@
+import { DataWishlist } from "./brands";
+
  
-export default async function Disgin({item}) {
+export default async function Disgin({item}: {item : DataWishlist}) {
 
 
 

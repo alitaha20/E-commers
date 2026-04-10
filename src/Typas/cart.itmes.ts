@@ -15,5 +15,6 @@ export interface CartItemsTypes {
  count : number 
  price : number
  product : ProductType
+ _id : string
 
  }
