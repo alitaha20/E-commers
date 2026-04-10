@@ -11,11 +11,11 @@ import {
 import image from "@/images/freshcart-logo.49f1b44d.svg fill.png"
 import { signOut, useSession } from "next-auth/react"
 import Link from "next/link"
-import React, { useContext } from "react"
+import React from "react"
 import { CiHeart } from "react-icons/ci"
 import { FaCartShopping } from "react-icons/fa6"
 import { PiIdentificationCardLight } from "react-icons/pi"
-import { cartContext } from "../_context/CartContextProvider"
+import { useCart } from "../_context/usecart"
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -57,7 +57,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
 
-  const {numberOfCart}  = useContext(cartContext)
+  const {numberOfCart}  = useCart()
 
 
 const session =  useSession()
