@@ -52,6 +52,7 @@ export const nextAuthOptions: NextAuthOptions = {
         if(finalRes.message ==  "success"){
 
             return {
+                id:finalRes.user._id,
                 name: finalRes.user.name ,
                 email :finalRes.user.email,
                 realTokenBackEnd:finalRes.token
