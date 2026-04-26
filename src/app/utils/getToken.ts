@@ -5,7 +5,8 @@ export default async function getToken() {
  
 const myCookies = await cookies()
 
-const getTokenFromCookies =  myCookies.get("next-auth.session-token")?.value
+const getTokenFromCookies =  myCookies.get("__Secure-next-auth.session-token")?.value ||
+  myCookies.get("next-auth.session-token")?.value
 
 if(getTokenFromCookies == null){
 
