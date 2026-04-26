@@ -47,8 +47,9 @@ export default function Paymentpage() {
 
          const res = await cartCashOrder( cartId ,userData)
 
-         console.log(res)
-         
+          if(res.message == "success"){
+            toast.success("order created successfully")
+          }
         }
 
          else if (value.type == "visa"){
