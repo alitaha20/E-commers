@@ -14,7 +14,6 @@ export const nextAuthOptions: NextAuthOptions = {
 
       }
 
-      console.log(params)
       
       return params.token
     },
@@ -70,6 +69,6 @@ export const nextAuthOptions: NextAuthOptions = {
   },
 
 
-  secret : process.env.NEXTAUTH_SECRET  
+  secret :process.env.NEXTAUTH_SECRET  
   
 };

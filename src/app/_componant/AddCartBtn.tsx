@@ -34,10 +34,6 @@ setnumberOfCart(res.numOfCartItems )
 setcartDataProduct(res.data.products)
 setcartDataNumber(res.data.totalCartPrice)
 
-console.log(res.numOfCartItems)
-console.log(res.data.products)
-console.log(res.data.totalCartPrice)
-
 
 }
 

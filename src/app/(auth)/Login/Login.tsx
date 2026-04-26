@@ -32,7 +32,6 @@ const form = useForm({
 
 async  function handelSignIn (values :loginDataType){
 
-console.log (values)
 
 signIn("credentials" , {
   ...values,
